@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/* line 3, ../sass/intro.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f1e8;
+  font-family: "微软雅黑";
+}
+
+/* line 9, ../sass/intro.scss */
+p {
+  margin: 0;
+}
+
+/* line 12, ../sass/intro.scss */
+hr {
+  border-top: 1px solid #eeeeee;
+  border-bottom: none;
+}
+
+/* line 16, ../sass/intro.scss */
+.title {
+  width: 70%;
+  padding: 0 5%;
+  margin: 30px 0 10px 0;
+  line-height: 30px;
+  font-size: 16px;
+  color: #60a9eb;
+}
+
+/* line 24, ../sass/intro.scss */
+.title img {
+  width: 24px;
+  margin-top: -4px;
+  margin-right: 4px;
+}
+
+/* line 29, ../sass/intro.scss */
+.box01 p .strong {
+  color: #f6b37f;
+}
+
+/* line 32, ../sass/intro.scss */
+.box02 p {
+  line-height: 40px;
+}
+
+/* line 35, ../sass/intro.scss */
+.box02 button {
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  background-color: #aaaaaa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+
+/* line 46, ../sass/intro.scss */
+.box02 button.active {
+  background-color: #5bc99c;
+}
+
+/* line 49, ../sass/intro.scss */
+.box03 .bg {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 53, ../sass/intro.scss */
+.box03 .how {
+  position: relative;
+  width: 10%;
+  height: 5%;
+  top: 3%;
+}
+
+/* line 59, ../sass/intro.scss */
+.box03 .how1 {
+  left: 79%;
+}
+
+/* line 62, ../sass/intro.scss */
+.box03 .how2 {
+  left: 89%;
+}
+
+/* line 65, ../sass/intro.scss */
+.box03 p .strong {
+  color: #FF7171;
+}
+
+/* line 68, ../sass/intro.scss */
+.tips-bg {
+  background: url(../../img/intro/tips-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 72, ../sass/intro.scss */
+.tips-bg p {
+  width: 80%;
+  padding: 30px 10% 20px 10%;
+}
+
+/* line 76, ../sass/intro.scss */
+.tips-bg p .data {
+  color: #f15a5a;
+}
+
+/* line 79, ../sass/intro.scss */
+.tips-bg p .strong {
+  color: #1a98ff;
+}
+
+/* line 82, ../sass/intro.scss */
+.box04 .formula {
+  color: #7f8fa4;
+}
+
+/* line 85, ../sass/intro.scss */
+.box04 .due-in {
+  color: #a4d18d;
+}
+
+/* line 88, ../sass/intro.scss */
+.box04 .rate {
+  color: #f29a76;
+}
+
+/* line 91, ../sass/intro.scss */
+.box04 .calculator {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+/* line 97, ../sass/intro.scss */
+.box04 .calculator .brokerage {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* line 102, ../sass/intro.scss */
+.box04 .calculator .brokerage .left {
+  color: #cccccc;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+/* line 107, ../sass/intro.scss */
+.box04 .calculator .brokerage .right {
+  color: #ff7373;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* line 113, ../sass/intro.scss */
+.box04 .calculator .brokerage .right .strong {
+  font-size: 18px;
+}
+
+/* line 116, ../sass/intro.scss */
+.calculator-box .input-box {
+  height: 40px;
+}
+
+/* line 119, ../sass/intro.scss */
+.calculator-box .input-box p {
+  line-height: 40px;
+  font-size: 12px;
+  color: #cccccc;
+}
+
+/* line 124, ../sass/intro.scss */
+.calculator-box .input-box .strong {
+  color: #7f8fa4;
+}
+
+/* line 127, ../sass/intro.scss */
+.calculator-box .input-box .rate, .calculator-box .input-box .partner-dueIn {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+}
+
+/* line 133, ../sass/intro.scss */
+.calculator-box .input-box .rate {
+  color: #f29a76;
+}
+
+/* line 136, ../sass/intro.scss */
+.calculator-box .input-box .partner-dueIn {
+  color: #a4d18d;
+}
+
+/* line 139, ../sass/intro.scss */
+.calculator-box .input-box .f-left {
+  float: left;
+  width: 36%;
+}
+
+/* line 143, ../sass/intro.scss */
+.calculator-box .input-box .f-right {
+  float: right;
+  width: 64%;
+}
+
+/* line 147, ../sass/intro.scss */
+.calculator-box .input-box input {
+  width: 70px;
+  height: 26px;
+  margin-right: 5px;
+  padding: 0 10px;
+  border: 1px solid #cccccc;
+  border-radius: 30px;
+  color: #7f8fa4;
+}
+
+/* line 156, ../sass/intro.scss */
+.box05 {
+  margin-top: 30px;
+}
+
+/* line 159, ../sass/intro.scss */
+.box05 .bg {
+  width: 100%;
+}
+
+/* line 162, ../sass/intro.scss */
+.box05 .how {
+  position: relative;
+  width: 6%;
+  height: 10%;
+  top: 18%;
+  left: 93%;
+}
+
+/* line 169, ../sass/intro.scss */
+.box06 p {
+  margin-bottom: 4px;
+}
+
+/* line 172, ../sass/intro.scss */
+.box06 .regulations-title {
+  font-size: 16px;
+  color: #58aef5;
+  line-height: 30px;
+}
+
+/* line 177, ../sass/intro.scss */
+.box07 button {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0 40px 0;
+  color: #ffffff;
+  background-color: #aaaaaa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+
+/* line 189, ../sass/intro.scss */
+.box07 button.active {
+  background-color: #5bc99c;
+}
+
+/* line 192, ../sass/intro.scss */
+.content .pop-tips {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100000000000;
+}
+
+/* line 202, ../sass/intro.scss */
+.content .pop-tips .tips-panel {
+  width: 80%;
+  height: 160px;
+  margin-top: 40%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+/* line 210, ../sass/intro.scss */
+.content .pop-tips .tips-panel .tips {
+  width: 80%;
+  padding: 26px 10% 0 10%;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+}
+
+/* line 218, ../sass/intro.scss */
+.content .pop-tips .buttons {
+  box-sizing: border-box;
+  width: 90%;
+  height: 46px;
+  border-top: 1px solid #eeeeee;
+}
+
+/* line 224, ../sass/intro.scss */
+.content .pop-tips .buttons .ok {
+  float: left;
+  width: 100%;
+  height: 30px;
+  margin-top: 8px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+/* line 232, ../sass/intro.scss */
+.banner {
+  background: url(../img/intro/banner3.jpg) no-repeat top center;
+  background-size: 100%;
+  height: 9.3168rem;
+}
+
+/* line 237, ../sass/intro.scss */
+.box03 .bg {
+  background: url(../img/intro/intro3.png) no-repeat top center;
+  background-size: 100%;
+  height: 8.9136rem;
+}
+
+/* line 243, ../sass/intro.scss */
+.box05 .bg {
+  background: url(../img/intro/box05-bg3.jpg) no-repeat top center;
+  background-size: 100%;
+  height: 5.9472rem;
+}
