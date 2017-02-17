@@ -8,6 +8,8 @@
         <meta name="author" content="">
         <link rel="icon" href="/static/favicon.ico">
         <title>{{ data.title }}</title>
+        {% require "vipcenter:static/js/bigpipe.js" %}
+
         {% require "vipcenter:static/css/m-base.css" %}
         {% require "vipcenter:static/css/intro.css" %}
     {% endhead %}
