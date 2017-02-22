@@ -1,6 +1,24 @@
 var host = 'http://192.168.1.35/';
 
 fis.set('privateRepos', {
+    'react': {
+        'info': 'create a app',
+        'config': {
+            'type': 'github',
+            'repos': 'hefangshi/yog2-react-redux-demo',
+            'prompt': [{
+                name: 'app_name',
+                description: 'Enter your app name',
+                type: 'string',
+                required: true,
+                'default': 'react'
+            }],
+            'roadmap': [{
+                reg: '**',
+                release: '/${app_name}/$&'
+            }]
+        }
+    },
     'wzapp': {
         'info': 'create a app',
         'config': {
