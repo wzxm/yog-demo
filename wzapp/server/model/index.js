@@ -1,5 +1,5 @@
 module.exports.getData = function(){
 	return {
-		title : 'vipcenter',
+		title : '测试App',
 	};
 };

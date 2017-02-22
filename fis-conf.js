@@ -1,6 +1,24 @@
 var host = 'http://192.168.1.35/';
 
 fis.set('privateRepos', {
+    'wzapp': {
+        'info': 'create a app',
+        'config': {
+            'type': 'github',
+            'repos': 'wzxm/yog2-app-template',
+            'prompt': [{
+                name: 'app_name',
+                description: 'Enter your app name',
+                type: 'string',
+                required: true,
+                'default': 'home'
+            }],
+            'roadmap': [{
+                reg: '**',
+                release: '/${app_name}/$&'
+            }]
+        }
+    },
     'ppapp': {
         'host': host,
         'info': 'create a app',

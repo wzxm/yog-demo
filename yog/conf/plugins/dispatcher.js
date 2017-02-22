@@ -55,7 +55,7 @@ module.exports.dispatcher = {
      * http://www.example.com/doc/detail => app/home/action/doc/detail.js
      ***************************************************************************/
 
-    defaultRouter: 'vipcenter',
+    defaultRouter: 'home',
 
     /**
      **************************************************************************
@@ -68,7 +68,7 @@ module.exports.dispatcher = {
      * http://www.example.com/home => app/home/action/index.js
      ***************************************************************************/
 
-    defaultAction: 'home',
+    defaultAction: 'index',
 
     /**
      **************************************************************************
