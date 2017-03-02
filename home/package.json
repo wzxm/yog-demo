@@ -5,7 +5,8 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "debug": "yog2 release debug -cwL --fis3",
+    "test": "yog2 release test --fis3"
   },
   "author": "",
   "license": "ISC"

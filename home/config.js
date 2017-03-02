@@ -1,6 +1,6 @@
 module.exports = {
     'debug': true,
-    'name': 'wzapp',
+    'name': 'home',
     'title': '测试',
     'domain': 'https://special.ppmoney.com',
     'domainFolder': '/PPyog2/',

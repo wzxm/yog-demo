@@ -1,14 +1,14 @@
 <!doctype html>
-{% html lang="en" framework="homt:static/js/mod.js" %}
+{% html lang="en" framework="wzapp:static/js/mod.js" %}
     {% head %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="/static/favicon.ico">
+        <link rel="icon" href="../static/favicon.ico">
         <title>{{ title }}</title>
-        {% require "homt:static/js/jquery-1.10.2.js" %}
+        {% require "wzapp:static/js/jquery-1.10.2.js" %}
     {% endhead %}
 
     {% body %}

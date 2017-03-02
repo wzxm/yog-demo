@@ -1,11 +1,15 @@
 {
-  "name": "homt",
+  "name": "wzapp",
   "version": "1.0.0",
   "description": "",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run debug",
+    "debug": "yog2 release debug -cwL --fis3",
+    "test": "yog2 release test --fis3",
+    "prod": "yog2 release prod --fis3",
+    "ftp": "node prod.js"
   },
   "author": "",
   "license": "ISC"

@@ -1,5 +1,5 @@
 'use strict'
-import Root from '../../client/actions/page/root/server.js'
+import Root from 'home:page/root/server.js'
 import { match } from 'home:node_modules/react-router/lib/index.js'
 import routes from 'home:routes/index.js'
 
