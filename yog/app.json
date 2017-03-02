@@ -1,0 +1,21 @@
+{
+	"apps": [{
+		"name": "yog-demo",
+		"script": "app.js",
+		"watch": false,
+		"log_date_format": "YYYY-MM-DD HH:mm Z",
+		"ignore_watch": ["log","pm2log", "node_modules"],
+		"merge_logs"  : true,
+	    "error_file" : "./pm2log/app-err.log",  // 错误日志路径
+	    "out_file"   : "./pm2log/app-out.log",  // 普通日志路径
+	    "cwd"         : "./",
+	    "env" : {
+	       "NODE_ENV": "yog/dispatcher,yog/loader,yog/plugins,yog/recv-reload",
+	       "YOG_DEBUG": true,
+	    },
+	    "env_test" : {
+	       "NODE_ENV": "yog/dispatcher,yog/loader,yog/plugins,yog/recv-reload",
+	       "YOG_DEBUG": true
+	    }
+	}]
+}
