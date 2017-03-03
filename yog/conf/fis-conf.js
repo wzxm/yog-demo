@@ -75,17 +75,6 @@ module.exports = function(sconfig) {
             optimizer: fis.plugin('png-compressor')
         });
 
-
-        // 按照 react-redux 的目录规范设置源代码目录
-        fis.match('/client/{actions,components,constants,routes,containers,page,reducers,store}/**.{js,es,jsx,ts,tsx}', {
-            parser: fis.plugin('typescript', {
-                module: 1,
-                target: 0
-            }),
-            isJsXLike: true,
-            isMod: true
-        });
-
         // 启用npm管理前端组件
         fis.enableNPM({
             autoPack: true // 使用autoPack可以自动将依赖的npm组件打包合并
@@ -143,7 +132,7 @@ module.exports = function(sconfig) {
      * @param  {Object} opt      命令行参数
      * @return {undefined}
      */
-    function replaceImg(ret, conf, settings, opt) {
+    function newRet(ret, conf, settings, opt) {
         // ret.src 所有的源码，结构是 {'<subpath>': <File 对象>}
         // ret.ids 所有源码列表，结构是 {'<id>': <File 对象>}
         // ret.map 如果是 spriter、postpackager 这时候已经能得到打包结果了，
