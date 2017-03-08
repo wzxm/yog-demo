@@ -20,6 +20,7 @@
                 {% block content %}
                 {% endblock %}
             </div>
+        <liveLove/>
         </div>
         {% require "vipcenter:static/js/compatible.js" %}
         {% require "vipcenter:static/js/zepto.min.js" %}

@@ -1,14 +1,14 @@
 let users = require('../model/users.js');
 
 module.exports.get = function(req, res, next) {
-	let id = parseInt(req.body.id, 10);
+	let id = parseInt(req.params.id, 10);
 	if(isNaN(id)){
 		throw new Error('invalid id');
 	}
+	
 	users.get(id).then(function(user){
-		res.render('vipcenter/page/index.tpl', {
-			user: user
-		});
+		let string = JSON.stringify(user);
+		res.render('vipcenter/page/index.tpl', { id: id, content: string });
 	}).catch(next);
 }
 

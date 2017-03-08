@@ -14,11 +14,7 @@ export default function (router) {
       if (errno === undefined) {
         errno = 0;
       };
-      res.json({
-        errno,
-        data,
-        msg
-      });
+      res.json({ errno, data, msg });
     };
     next();
   });
