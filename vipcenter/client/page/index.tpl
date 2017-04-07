@@ -3,7 +3,6 @@
 {% block content %}
      <div id="pages-container">
         {% widget "vipcenter:widget/message/message.tpl"%}
-        {{ content }}
-        {{ id }}
+        {% widget "vipcenter:widget/users/users.tpl" %}
      </div>
 {% endblock %}

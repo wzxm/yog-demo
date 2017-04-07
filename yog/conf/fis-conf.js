@@ -44,6 +44,11 @@ module.exports = function(sconfig) {
 
     if (fis.IS_FIS3) {
 
+        // 启用npm管理前端组件
+        fis.enableNPM({
+            autoPack: false // 使用autoPack可以自动将依赖的npm组件打包合并
+        });
+
         fis.match('**/*.scss', {
             parser: fis.plugin('node-sass', {
                 // options...
@@ -73,11 +78,6 @@ module.exports = function(sconfig) {
         fis.match('*.png', {
             // fis-optimizer-png-compressor 插件进行压缩，已内置
             optimizer: fis.plugin('png-compressor')
-        });
-
-        // 启用npm管理前端组件
-        fis.enableNPM({
-            autoPack: true // 使用autoPack可以自动将依赖的npm组件打包合并
         });
 
         fis.media('debug').match('*', {
@@ -115,6 +115,11 @@ module.exports = function(sconfig) {
             })
         });
     } else {
+        // 启用npm管理前端组件
+        fis.enableNPM({
+            autoPack: true // 使用autoPack可以自动将依赖的npm组件打包合并
+        });
+        
         fis.config.set('deploy', {
             debug: {
                 to: '/',

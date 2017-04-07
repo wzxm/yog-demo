@@ -1,5 +1,6 @@
-(function(){
+var Vue = require('vue');
 
+(function(){
     // 加载中状态锁
     let fetching = false;
     // 用于加载时发送请求参数，表示第几屏内容，初始为1，以后每请求一次，递增 1
