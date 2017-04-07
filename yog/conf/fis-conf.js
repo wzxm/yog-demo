@@ -115,11 +115,6 @@ module.exports = function(sconfig) {
             })
         });
     } else {
-        // 启用npm管理前端组件
-        fis.enableNPM({
-            autoPack: true // 使用autoPack可以自动将依赖的npm组件打包合并
-        });
-        
         fis.config.set('deploy', {
             debug: {
                 to: '/',
