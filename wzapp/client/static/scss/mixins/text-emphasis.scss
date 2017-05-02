@@ -1,0 +1,11 @@
+// 情景文本颜色变化
+
+@mixin text-emphasis-variant($parent, $color) {
+	#{$parent} {
+		color: $color;
+	}
+	a#{$parent}:hover,
+	a#{$parent}:focus {
+		color: darken($color, 10%); // 使颜色加深10%
+	}
+}
