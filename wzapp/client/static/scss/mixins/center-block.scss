@@ -1,8 +1,0 @@
-// 让内容块居中
-// 为任意元素设置 display: block 属性并通过 margin 属性让其中的内容居中。
-
-@mixin center-block() {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}

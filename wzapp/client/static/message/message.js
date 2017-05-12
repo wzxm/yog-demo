@@ -66,4 +66,126 @@ var Vue = require('vue');
     window.setTimeout(handleScroll, 100);
     fetchContent();
 
+
+    let transform = getTransform();
+    function Drag(selector) {
+        // 放在构造函数中的属性，都是属于每一个实例单独拥有
+        this.elem = typeof selector == 'Object' ? selector : document.getElementById(selector);
+        this.startX = 0;
+        this.startY = 0;
+        this.sourceX = 0;
+        this.sourceY = 0;
+
+        this.init();
+    }
+
+    // 原型
+    Drag.prototype = {
+        constructor: Drag,
+        init: function() {
+            // 初始时需要做些什么事情
+            this.setDrag();
+        },
+        // 获取元素的样式
+        getStyle: function(property) {
+            // IE 通过 currentStyle 来获取元素的样式，其他浏览器通过 getComputedStyle 来获取
+            return document.defaultView.getComputedStyle ? document.defaultView.getComputedStyle(this.elem, false)[property] : this.elem.currentStyle[property];
+        },
+        getPosition: function() {
+            var pos = { x: 0, y: 0 };
+            if(transform) {
+                var transformValue = this.getStyle(transform);
+                if(transformValue == 'none') {
+                    this.elem.style[transform] = 'translate(0, 0)';
+                } else {
+                    var temp = transformValue.match(/-?\d+/g);
+                    pos = {
+                        x: parseInt(temp[4].trim()),
+                        y: parseInt(temp[5].trim())
+                    }
+                }
+            } else {
+                if(this.getStyle('position') == 'static') {
+                    this.elem.style.position = 'relative';
+                } else {
+                    pos = {
+                        x: parseInt(this.getStyle('left') ? this.getStyle('left') : 0),
+                        y: parseInt(this.getStyle('top') ? this.getStyle('top') : 0)
+                    }
+                }
+            }
+            return pos;
+        },
+        setPostion: function(pos) {
+            if(transform) {
+                this.elem.style[transform] = 'translate('+ pos.x +'px, '+ pos.y +'px)';
+            } else {
+                this.elem.style.left = pos.x + 'px';
+                this.elem.style.top = pos.y + 'px';
+            }
+        },
+        setDrag: function() {
+            let self = this;
+            this.elem.addEventListener('mousedown', start, false);
+            function start(event) {
+                // 获取鼠标初始位置
+                startX = event.pageX;
+                startY = event.pageY;
+
+                // 获取元素初始位置
+                let pos = self.getPosition();
+
+                sourceX = pos.x;
+                sourceY = pos.y;
+
+                // 绑定
+                document.addEventListener('mousemove', move, false);
+                document.addEventListener('mouseup', end, false);
+            }
+
+            function move(event) {
+                // 获取鼠标当前位置
+                let currentX = event.pageX;
+                let currentY = event.pageY;
+
+                // 计算差值
+                let distanceX = currentX - startX;
+                let distanceY = currentY - startY;
+
+                // 计算并设置元素当前位置
+                self.setPostion({
+                    x: (sourceX + distanceX).toFixed(),
+                    y: (sourceY + distanceY).toFixed()
+                })
+            }
+
+            function end(event) {
+                document.removeEventListener('mousemove', move);
+                document.removeEventListener('mouseup', end);
+            }
+        }
+    }
+
+    // 获取当前浏览器支持的 transform 兼容写法
+    function getTransform() {
+        let transform = "",
+            divStyle = document.createElement("div").style,
+            // 可能涉及到的几种兼容性写法，通过循环找出浏览器识别的那一个
+            transformArr = ["transform", "webkitTransform", "MozTransform", "msTransform", "OTransform"],
+            i = 0,
+            len = transformArr.length;
+
+        for(;i < len; i++) {
+            if(transformArr[i] in divStyle) {
+                // 找到之后立即返回，结束函数
+                return transform = transformArr[i];
+            }
+        }
+        // 如果没有找到，就直接返回空字符串
+        return transform;
+    }
+
+    window.Drag = Drag;
 })();
+
+new Drag('target');
