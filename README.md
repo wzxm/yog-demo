@@ -21,6 +21,10 @@ yog2 是一个专注于 Node.js UI 中间层的应用框架。它基于 express 
 
 ```bash
 npm install -g yog2
+npm install fis-parser-node-sass fis-parser-babel-6.x fis-parser-handlebars-3.x -g
+把项目根目录的index.js替换到C:\Users\{用户}\AppData\Roaming\npm\node_modules\yog2\node_modules\yog2-command-init
+
+如果要使用 vue 则需要安装 fis3-parser-vue-component, fis3-parser-translate-es6, // fis3-parser-translate-es3ify
 ```
 
 ### 创建project
