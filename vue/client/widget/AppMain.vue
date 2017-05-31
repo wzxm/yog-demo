@@ -12,16 +12,27 @@
 
     export default {
         components: { Home },
-        init () {
-            // console.log(123)
+        // 组件实例刚被创建，组件属性计算之前，如 data 属性等
+        beforeCreate () {
             // let router = new Router()
-            // console.log(router)
-            // router.push('/home')// 跳转到home组件
+            // router.push('/')// 跳转到home组件
         },
         data () {
             return {
                 title: '这是一个 vue 的启动页面'
             }
+        },
+        created () {
+            // 组件实例创建完成，属性已绑定，但 DOM 还未生成，$el 属性还不存在
+            // 此时 data 已经被 observed 了
+        },
+        // 模板编译/挂载之前
+        beforeMount () {
+
+        },
+        // 模板编译/挂载之后
+        mounted () {
+
         },
         watch: {
             '$route' (to, from) {

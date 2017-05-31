@@ -1,4 +1,4 @@
-var host = 'http://192.168.1.35/';
+var host = 'http://git.scm.ppmoney.com/';
 
 fis.set('privateRepos', {
     'react': {
