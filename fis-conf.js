@@ -19,6 +19,24 @@ fis.set('privateRepos', {
             }]
         }
     },
+    'vueapp': {
+        'info': 'create a app',
+        'config': {
+            'type': 'github',
+            'repos': 'wzxm/yog2-vue2-template',
+            'prompt': [{
+                name: 'app_name',
+                description: 'Enter your app name',
+                type: 'string',
+                required: true,
+                'default': 'vue'
+            }],
+            'roadmap': [{
+                reg: '**',
+                release: '/${app_name}/$&'
+            }]
+        }
+    },
     'wzapp': {
         'info': 'create a app',
         'config': {
