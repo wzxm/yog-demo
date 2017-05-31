@@ -1,0 +1,16 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "yog2 release debug -cwL --fis3",
+    "test": "yog2 release test --fis3 && node prod.js && yog2 release test --fis3 uploadProd",
+    "prod": "yog2 release prod --fis3 && node prod.js && yog2 release prod --fis3 uploadProd"
+  },
+  "author": "",
+  "license": "ISC"
+}
