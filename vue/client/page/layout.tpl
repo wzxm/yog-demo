@@ -34,6 +34,6 @@
                 if(!Config.debug) { location.href = Config.redirect }
             }
         }();
-        require('vue:widget/app.js')
+        require('vue:widget/main.js')
     </script>
 {% endhtml %}

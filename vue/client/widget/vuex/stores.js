@@ -1,5 +1,3 @@
-// let Vue = require('vue');
-// let Vuex = require('vuex');
 import Vue from 'vue/dist/vue.js'
 import Vuex from 'vuex'
 // import * as actions from './actions'

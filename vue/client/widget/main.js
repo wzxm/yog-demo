@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue'
-import AppMain from './AppMain.vue'
+import App from './app.vue'
 import store from './vuex/stores'
 import router from './routers'
 
@@ -10,6 +10,7 @@ import router from './routers'
 new Vue({
     store,
     router,
-    template: '<AppMain/>',
-    components: { AppMain }
+    // template: '<App/>',
+    // components: { App }
+    render: h => h(App) //用render函数渲染引入的组件App.vue到index.html中的#application元素中
 }).$mount('#app');

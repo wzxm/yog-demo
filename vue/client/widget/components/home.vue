@@ -1,17 +1,18 @@
-<template>
+<template lang="html">
   <div class="home">
-    home 页面
+    <span class="head">home 页面</span>
     <br>
-    <router-link to="/">Go to Home</router-link>
+    <router-link to="/">Go to HomePage</router-link>
+    <br>
+    <router-link to="/chat">Go to Chat</router-link>
     <br>
     <router-link to="/about">Go to About</router-link>
     <br>
+    <router-link :to="{ path: 'register', query: { userId: 123 }}">Go to Register</router-link>
     <hr>
-    <transition name="slide-fade">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
-    </transition>
+    <router-view class="view one"></router-view>
+    <router-view class="view two" name="a"></router-view>
+    <router-view class="view three" name="b"></router-view>
   </div>
 </template>
 

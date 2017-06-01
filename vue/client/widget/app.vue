@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
     <div class="main">
         <h2 class="title">{{title}}</h2>
         <Home></Home>

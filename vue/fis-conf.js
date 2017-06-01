@@ -33,6 +33,7 @@ fis.config.set('livereload.port', 35729);
 var incPath;
 // Sass自动添加css前缀 需要安装组件 npm install -g fis3-preprocessor-autoprefixer
 var autoFixCss;
+console.log('fis = ' + fis.IS_FIS3);
 if (fis.IS_FIS3) {
 
     // 启用npm管理前端组件
@@ -114,7 +115,7 @@ if (fis.IS_FIS3) {
         autoFixCss = ['ie >= 8', 'firefox >= 15'];
     }
 
-    fis.match('**.scss', {
+    fis.match('**.scss', { 
         preprocessor: fis.plugin('autoprefixer', {
             'browsers': autoFixCss,
             'cascade': true
@@ -158,6 +159,10 @@ if (fis.IS_FIS3) {
         optimizer: fis.plugin('png-compressor')
     });
 
+    fis.match('::image', {
+        useMap: true
+    });
+
     fis.media('debug').match('*', {
         optimizer: null,
         useHash: false,
@@ -167,6 +172,8 @@ if (fis.IS_FIS3) {
         })
     });
 
+    // 给文件 URL 设置 domain 信息
+    // 如果需要给某些资源添加 cdn，分配到此属性的资源 url 会被添加 domain；
     fis.media('prod').match('*.{js,css,sass,scss,less,png,gif,jpg,ico,eot,svg,ttf,woff}', {
         url: url + namespace + '$0',
         domain: domain
@@ -192,6 +199,12 @@ if (fis.IS_FIS3) {
     //         '/client/widget/pkgall.css': '/client/widget/**.scss'
     //     })]
     // });
+
+    // 打包插件
+    fis.match('::package', {
+        packager: fis.plugin('map')
+    });
+
 
     //发布到正式环境
     fis.media('test').match('*', {
